@@ -1,2 +1,2 @@
 # wc_java
-Word count unix tool inplementation in java
+Word count unix tool implementation in java

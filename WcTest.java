@@ -73,4 +73,10 @@ public class WcTest{
     assertEquals(48,wc.getChars(text));
   }
 
+  @Test
+  public void getChars_gives_40_for_hello_How_are_you (){
+    String text = "hello, How are you?\nI am fine\nAnd you?\n";
+    Wc wc = new Wc();
+    assertEquals(42,wc.getChars(text));
+  }
 }

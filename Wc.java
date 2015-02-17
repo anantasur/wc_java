@@ -11,9 +11,10 @@ public class Wc{
     String[] splittedText = text.split("\\s");
     return(splittedText.length);
   }
+
   public int getChars(String text){
     int delta = getLines(text);
-    if(delta>1) return text.length()+delta;
+    if(delta>1) return text.length() + delta;
     return text.length();
   }
 
