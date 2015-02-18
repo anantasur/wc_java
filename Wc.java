@@ -18,4 +18,8 @@ public class Wc{
     return text.length();
   }
 
+  public String getWC(String text){
+    return getLines(text)+" "+getWords(text)+" "+getChars(text);
+  }
+
 }
