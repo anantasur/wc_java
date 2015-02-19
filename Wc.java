@@ -1,9 +1,15 @@
 public class Wc{
 
   private String text = null;
+  private String option = null;
 
   public Wc(String text){
     this.text = text;
+  }
+
+  public Wc(String text, String option){
+    this.text = text;
+    this.option = option;
   }
 
   public int getLines(){
@@ -29,7 +35,13 @@ public class Wc{
   }
 
   public String getWC(){
+    if(option != null) {
+			switch(option) {
+				case "-l" : return ""+getLines();
+				case "-c" : return ""+getChars();
+				case "-w" : return ""+getWords();
+			}
+		}
     return getLines()+" "+getWords()+" "+getChars();
   }
-
 }

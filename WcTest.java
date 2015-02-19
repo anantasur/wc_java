@@ -80,4 +80,24 @@ public class WcTest{
     assertTrue(wc.getWC().equals("3 9 39"));
   }
 
+  @Test
+	public void wc_should_return_1_for_hello_newLine_my_world_when_l_option_is_given () {
+		String sentence = new String("hello\nmy world");
+		Wc wc = new Wc(sentence,"-l");
+		assertEquals(wc.getWC(), "1");
+	}
+
+  @Test
+  public void wc_should_return_14_for_hello_newLine_my_world_when_c_option_is_given () {
+    String sentence = new String("hello\nmy world");
+    Wc wc = new Wc(sentence,"-c");
+    assertEquals(wc.getWC(), "14");
+  }
+
+  @Test
+  public void wc_should_return_3_for_hello_newLine_my_world_when_w_option_is_given () {
+    String sentence = new String("hello\nmy world");
+    Wc wc = new Wc(sentence,"-w");
+    assertEquals(wc.getWC(), "3");
+  }
 }
