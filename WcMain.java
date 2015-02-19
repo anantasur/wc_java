@@ -19,10 +19,7 @@ public class WcMain {
       WcReader file = new WcReader(fileName);
       text = file.reader();
     }
-    if(args.length>1)
-      wc = new Wc(text,option);
-    else
-      wc = new Wc(text);
+    wc = new Wc(text,option);
     System.out.println(wc.getWC()+" "+fileName);
   }
 
