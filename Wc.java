@@ -33,7 +33,7 @@ public class Wc{
     return text.length();
   }
 
-  public String getWC(String text){
+  public String getWC(){
     return getLines()+" "+getWords()+" "+getChars();
   }
 

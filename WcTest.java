@@ -84,7 +84,13 @@ public class WcTest{
   public void wc_gives_42_char_count_3_line_count_and_9_word_count (){
     String text = "hello, How are you?\nI am fine\nAnd you?\n";
     Wc wc = new Wc(text);
-    assertTrue(wc.getWC(text).equals("3 9 42"));
+    assertTrue(wc.getWC().equals("3 9 42"));
   }
 
+  @Test
+  public void wc_gives_40_char_count_3_line_count_and_9_word_count (){
+    String text = "hello, How are you?\nI am fine\nAnd you?";
+    Wc wc = new Wc(text);
+    assertTrue(wc.getWC().equals("3 9 40"));
+  }
 }
