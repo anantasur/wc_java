@@ -7,9 +7,8 @@ public class Wc{
   }
 
   public int getLines(){
-    if(text.length()==0) return 0;
-    String[] splittedText = text.split("\\n");
-    return(splittedText.length);
+    int delta = occurenceOfChar('\n');
+    return delta;
   }
 
   public int getWords(){
@@ -28,8 +27,6 @@ public class Wc{
 	}
 
   public int getChars(){
-    int delta = occurenceOfChar('\n');
-    if(delta>1) return text.length() + delta;
     return text.length();
   }
 

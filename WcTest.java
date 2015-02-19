@@ -11,10 +11,10 @@ public class WcTest{
   }
 
   @Test
-  public void getLines_gives_1_for_string_with_space (){
+  public void getLines_gives_0_for_string_with_space (){
     String text = " ";
     Wc wc = new Wc(text);
-    assertEquals(1,wc.getLines());
+    assertEquals(0,wc.getLines());
   }
 
   @Test
@@ -32,7 +32,7 @@ public class WcTest{
   }
 
   @Test
-    public void getWords_gives_1_for_space_in_a_string (){
+    public void getWords_gives_0_for_space_in_a_string (){
     String text = " ";
     Wc wc = new Wc(text);
     assertEquals(0,wc.getWords());
@@ -70,27 +70,21 @@ public class WcTest{
   public void getChars_gives_48_for_hello_How_are_you (){
     String text = "hello, this is a good day.\nWhat do you think?\n";
     Wc wc = new Wc(text);
-    assertEquals(48,wc.getChars());
+    assertEquals(46,wc.getChars());
   }
 
   @Test
-  public void getChars_gives_40_for_hello_How_are_you (){
+  public void getChars_gives_39_for_hello_How_are_you (){
     String text = "hello, How are you?\nI am fine\nAnd you?\n";
     Wc wc = new Wc(text);
-    assertEquals(42,wc.getChars());
+    assertEquals(39,wc.getChars());
   }
 
   @Test
   public void wc_gives_42_char_count_3_line_count_and_9_word_count (){
     String text = "hello, How are you?\nI am fine\nAnd you?\n";
     Wc wc = new Wc(text);
-    assertTrue(wc.getWC().equals("3 9 42"));
+    assertTrue(wc.getWC().equals("3 9 39"));
   }
 
-  @Test
-  public void wc_gives_40_char_count_3_line_count_and_9_word_count (){
-    String text = "hello, How are you?\nI am fine\nAnd you?";
-    Wc wc = new Wc(text);
-    assertTrue(wc.getWC().equals("3 9 40"));
-  }
 }

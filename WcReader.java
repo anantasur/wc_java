@@ -19,9 +19,10 @@ public class WcReader {
     }
 
     BufferedReader br = new BufferedReader(fr);
-    char[] cbuf = new char[length+3];
+    char[] cbuf = new char[length];
     br.read(cbuf, 0, length);
     String text = new String(cbuf);
+    Wc wc = new Wc(text);
     return text;
   }
 }
