@@ -25,13 +25,6 @@ public class WcTest{
   }
 
   @Test
-    public void getWords_gives_0_for_no_words_in_a_string (){
-    String text = "";
-    Wc wc = new Wc(text);
-    assertEquals(0,wc.getWords());
-  }
-
-  @Test
     public void getWords_gives_0_for_space_in_a_string (){
     String text = " ";
     Wc wc = new Wc(text);

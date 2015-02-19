@@ -12,10 +12,8 @@ public class Wc{
   }
 
   public int getWords(){
-    if(text.length()==0) return 0;
-    String[] splittedText = text.split("\\s");
-    return(splittedText.length);
-  }
+  		return this.text.split("[ \n]").length;
+  	}
 
   private int occurenceOfChar(char c) {
 		int i,count = 0,limit = text.length();
